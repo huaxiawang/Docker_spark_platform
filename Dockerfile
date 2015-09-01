@@ -103,6 +103,7 @@ RUN \
   echo 'export PATH=~/scala-$SCALA_VERSION/bin:$PATH' >> /root/.bashrc
 
 ENV CLASSPATH=$CLASSPATH:$HIVE_HOME/lib/mysql-connector-java.jar
+ENV PATH=$PATH:$HADOOP_PREFIX/bin:$HIVE_HOME/bin:$SPARK_HOME/bin
 
 RUN $HADOOP_PREFIX/bin/hdfs namenode -format
 
